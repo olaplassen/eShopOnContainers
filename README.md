@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/HPR111/eSHopOnContainers/_apis/build/status/catalog-api-build?branchName=dev)](https://dev.azure.com/HPR111/eSHopOnContainers/_build/latest?definitionId=3&branchName=dev)
+
 <a href="https://dot.net/architecture">
    <img src="https://github.com/dotnet-architecture/eShopOnContainers/raw/dev/img/eshop_logo.png" alt="eShop logo" title="eShopOnContainers" align="right" height="60" />
 </a>
