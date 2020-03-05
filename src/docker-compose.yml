@@ -36,7 +36,7 @@ services:
       - rabbitmq
 
   catalog-api:
-    image: ${REGISTRY:-eshop}/catalog.api:${PLATFORM:-linux}-${TAG:-latest}
+    image: ${REGISTRY:-eshop}/catalog.api:${PLATFORM:-linux}-${TAG:-linux-dev}
     build:
       context: .
       dockerfile: Services/Catalog/Catalog.API/Dockerfile
