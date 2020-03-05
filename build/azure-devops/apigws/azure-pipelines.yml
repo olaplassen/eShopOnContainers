@@ -1,3 +1,5 @@
+variables:
+  registryEndpoint: hpr111ACR
 trigger:
   branches:
     include:
