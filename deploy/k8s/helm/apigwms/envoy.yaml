@@ -12,14 +12,14 @@ static_resources:
         port_value: 80
     filter_chains:
     - filters:
-      - name: "envoy.http_connection_manager"
+      - name: envoy.http_connection_manager
         config:
           codec_type: auto
           stat_prefix: ingress_http
           route_config:
-            name: "eshop_backend_route"
+            name: eshop_backend_route
             virtual_hosts:
-            - name: "eshop_backend"
+            - name: eshop_backend
               domains:
               - "*"
               routes:
@@ -77,9 +77,9 @@ static_resources:
                   prefix_rewrite: "/"
                   cluster: shoppingagg
           http_filters:
-          - name: "envoy.router"
+          - name: envoy.router
           access_log:
-          - name: "envoy.file_access_log"
+          - name: envoy.file_access_log
             filter:
               not_health_check_filter: {}
             config:
