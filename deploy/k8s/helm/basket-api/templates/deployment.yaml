@@ -26,7 +26,7 @@ spec:
         linkerd.io/inject: enabled
         prometheus.io/scrape: "true"
         prometheus.io/path: "/"
-        prometheus.io/port: "80"
+        prometheus.io/port: "9153"
       {{- end }}        
     spec:
       {{ if .Values.inf.registry -}}
