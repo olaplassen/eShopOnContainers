@@ -24,6 +24,9 @@ spec:
       {{ if .Values.inf.mesh.enabled -}}
       annotations:
         linkerd.io/inject: enabled
+        prometheus.io/scrape: "true"
+        prometheus.io/path: "/"
+        prometheus.io/port: "80"
       {{- end }}        
     spec:
       {{ if .Values.inf.registry -}}
