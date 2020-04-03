@@ -21,12 +21,12 @@ spec:
       labels:
         app: {{ template "webstatus.name" . }}
         release: {{ .Release.Name }}
-      {{ if .Values.inf.mesh.enabled -}}
+#      {{ if .Values.inf.mesh.enabled -}}
       annotations:
         prometheus.io/scrape: "true"
         prometheus.io/path: "/"
         prometheus.io/port: "8000"
-        linkerd.io/inject: enabled
+#        linkerd.io/inject: enabled
       {{- end }}
     spec:
       {{ if .Values.inf.registry -}}
