@@ -23,8 +23,11 @@ spec:
         release: {{ .Release.Name }}
       {{ if .Values.inf.mesh.enabled -}}
       annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/path: "/metrics"
+        prometheus.io/port: "8000"
         linkerd.io/inject: enabled
-      {{- end }}             
+      {{- end }}
     spec:
       {{ if .Values.inf.registry -}}
       imagePullSecrets:
@@ -52,7 +55,7 @@ spec:
             periodSeconds: {{ .Values.probes.readiness.periodSeconds }}
             timeoutSeconds: {{ .Values.probes.readiness.timeoutSeconds }}
           {{- end -}}
-          {{- end }}                
+          {{- end }}
           image: "{{ template "fqdn-image" . }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
@@ -79,6 +82,10 @@ spec:
             - name: http
               containerPort: 80
               protocol: TCP
+            - name: metrics
+              containerPort: 8000
+              protocol: TCP
+              targetPort: 8000
           resources:
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}
@@ -93,4 +100,3 @@ spec:
       tolerations:
 {{ toYaml . | indent 8 }}
     {{- end }}
-
