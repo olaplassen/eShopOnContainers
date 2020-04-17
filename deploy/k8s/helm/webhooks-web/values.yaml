@@ -18,7 +18,11 @@ ingress:
     - chart-example.local
   tls: []
 
-resources: {}
+resources:
+  requests:
+    cpu: 250m
+  limits:
+    cpu: 500m
 
 
 nodeSelector: {}
@@ -48,5 +52,3 @@ env:
       value: 'K8S'
     - name: Token
       value: "WebHooks-Demo-Web"       # Can use whatever you want
-
-

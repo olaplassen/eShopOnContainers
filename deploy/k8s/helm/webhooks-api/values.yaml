@@ -18,7 +18,11 @@ ingress:
     - chart-example.local
   tls: []
 
-resources: {}
+resources:
+  requests:
+    cpu: 250m
+  limits:
+    cpu: 500m
 
 
 nodeSelector: {}
@@ -50,4 +54,3 @@ env:
       value: Development
     - name: OrchestratorType
       value: 'K8S'
-

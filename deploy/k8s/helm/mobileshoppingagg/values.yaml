@@ -17,7 +17,11 @@ ingress:
   annotations: {}
   tls: []
 
-resources: {}
+resources:
+  requests:
+    cpu: 250m
+  limits:
+    cpu: 500m
 
 
 nodeSelector: {}
@@ -60,7 +64,7 @@ env:
     - name: urls__grpcCatalog
       key: internalurls__grpcCatalog
     - name: urls__grpcOrdering
-      key: internalurls__grpcOrdering      
+      key: internalurls__grpcOrdering
       # values define environment variables with a fixed value (no configmap involved) (name is name of var, and value is its value)
   values:
     - name: ASPNETCORE_ENVIRONMENT

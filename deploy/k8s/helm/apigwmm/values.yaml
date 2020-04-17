@@ -9,7 +9,7 @@ image:
 service:
   type: ClusterIP
   port: 80
-  adminPort: 8001  
+  adminPort: 8001
 
 ingress:
   enabled: true
@@ -18,7 +18,11 @@ ingress:
     ingress.kubernetes.io/rewrite-target: "/"
   tls: []
 
-resources: {}
+resources:
+  requests:
+    cpu: 250m
+  limits:
+    cpu: 500m
 
 
 nodeSelector: {}

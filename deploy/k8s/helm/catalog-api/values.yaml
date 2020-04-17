@@ -12,7 +12,11 @@ service:
   port: 80
   grpcPort: 81
 
-resources: {}
+resources:
+  requests:
+    cpu: 250m
+  limits:
+    cpu: 500m
 
 
 nodeSelector: {}
@@ -60,4 +64,3 @@ probes:
     initialDelaySeconds: 90
     periodSeconds: 60
     port: 80
-

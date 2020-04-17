@@ -10,7 +10,11 @@ service:
   port: 27017
 
 
-resources: {}
+resources:
+  requests:
+    cpu: 250m
+  limits:
+    cpu: 500m
 
 nodeSelector: {}
 
