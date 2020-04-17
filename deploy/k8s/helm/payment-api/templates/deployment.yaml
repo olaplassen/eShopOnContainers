@@ -82,10 +82,6 @@ spec:
             - name: http
               containerPort: 80
               protocol: TCP
-            - name: metrics
-              containerPort: 8000
-              protocol: TCP
-              targetPort: 8000
           resources:
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}
