@@ -12,9 +12,11 @@ service:
 
 resources:
   requests:
-    cpu: 75m
+    memory: 10M
+    cpu: 8m
   limits:
-    cpu: 140m
+    memory: 1000M
+    cpu: 500m
 
 nodeSelector: {}
 
