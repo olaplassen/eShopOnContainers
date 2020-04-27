@@ -1,6 +1,6 @@
 # This helm values file defines app-based settings
 # Charts use those values, so this file **MUST** be included in all chart releases
-
+# Build test
 app:                                                    # app global settings
   name: "my-eshop"                                      # Override for custom app name
   ingress:                                              # ingress related settings
