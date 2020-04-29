@@ -41,7 +41,7 @@ env:
     - name: DPConnectionString
       key: identity__keystore
     - name: ApplicationInsights__InstrumentationKey
-      key: 9d6833d8-eb9d-4ba2-8b6f-f201e435eaea
+      key: all__InstrumentationKey
     - name: MvcClient
       key: mvc_e
     - name: SpaClient

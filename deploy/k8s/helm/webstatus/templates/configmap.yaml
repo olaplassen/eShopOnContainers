@@ -14,7 +14,7 @@ metadata:
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 data:
-  all__InstrumentationKey: "9d6833d8-eb9d-4ba2-8b6f-f201e435eaea"
+  all__InstrumentationKey: "{{ .Values.inf.appinsights.key }}"
   all__UseAzureServiceBus: "{{ .Values.inf.eventbus.useAzure }}"
   all_EnableLoadTest: "{{ .Values.inf.misc.useLoadTest }}"
   webstatus__keystore: {{ .Values.inf.redis.keystore.constr }}

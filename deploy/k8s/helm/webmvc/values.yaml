@@ -37,7 +37,7 @@ env:
   # configmap declares variables which value is taken from the config map defined in template configmap.yaml (name is name of var and key the key in configmap).
   configmap:
     - name: ApplicationInsights__InstrumentationKey
-      key: 9d6833d8-eb9d-4ba2-8b6f-f201e435eaea
+      key: all__InstrumentationKey
     - name: UseLoadTest
       key: all_EnableLoadTest
     - name: DPConnectionString
