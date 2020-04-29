@@ -39,7 +39,7 @@ env:
   # configmap declares variables which value is taken from the config map defined in template configmap.yaml (name is name of var and key the key in configmap).
   configmap:
     - name: ApplicationInsights__InstrumentationKey
-      key: all__InstrumentationKey
+      key: 9d6833d8-eb9d-4ba2-8b6f-f201e435eaea
     - name: HealthChecks-UI__HealthChecks__0__Name
       key: name__mvc__hc
     - name: HealthChecks-UI__HealthChecks__0__Uri

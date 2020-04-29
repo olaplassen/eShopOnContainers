@@ -16,12 +16,12 @@ metadata:
     heritage: {{ .Release.Service }}
 data:
   all__EventBusConnection: {{ .Values.inf.eventbus.constr }}
-  all__InstrumentationKey: "{{ .Values.inf.appinsights.key }}"
+  all__InstrumentationKey: "9d6833d8-eb9d-4ba2-8b6f-f201e435eaea"
   all__UseAzureServiceBus: "{{ .Values.inf.eventbus.useAzure }}"
   all_EnableLoadTest: "{{ .Values.inf.misc.useLoadTest }}"
   internalurls__IdentityUrl: http://{{ .Values.app.svc.identity }}
   urls__IdentityUrl: {{ $protocol }}://{{ $identity }}
   marketing__ConnectionString: Server={{ $sqlsrv }};Initial Catalog={{ .Values.inf.sql.marketing.db }};User Id={{ .Values.inf.sql.common.user }};Password={{ .Values.inf.sql.common.pwd }};
   marketing__MongoConnectionString: mongodb://{{ $mongo }}
-  marketing__MongoDatabase: {{ .Values.inf.mongo.marketing.database }} 
+  marketing__MongoDatabase: {{ .Values.inf.mongo.marketing.database }}
   marketing__PicBaseUrl: {{ $protocol }}://{{ $webshoppingapigw }}/c/api/v1/catalog/items/[0]/pic/
